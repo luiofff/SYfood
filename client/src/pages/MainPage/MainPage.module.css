@@ -1,0 +1,24 @@
+.footer {
+    width: 100%;
+    height: 224px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--neutral-system);
+    border-top: 1px solid var(--neutral-secondary);
+    padding: 100px 120px;
+}
+
+.logo {
+    width: 5rem;
+}
+
+.company_title {
+    color: var(--neutral-secondary, #555A65);
+    text-align: right;
+    /* Text/Regular/S */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}

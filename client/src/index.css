@@ -1,0 +1,53 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input {
+  outline: none;
+}
+
+pre {
+  font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+a, a:link, a:visited  {
+  text-decoration: none;
+}
+
+a:hover  {
+  text-decoration: none;
+}
+
+#root {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+:root {
+
+  /* colors */
+
+  --neutral-primary: #2B2D33;
+  --accent-brand: #00C257;
+  --neutral-secondary: #555A65;
+  --neutral-system: #F7F8FA;
+}
+
+input::placeholder {
+  color: var(--greyColor);
+}
