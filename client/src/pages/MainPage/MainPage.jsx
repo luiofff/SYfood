@@ -14,7 +14,7 @@ export default function MainPage() {
         <SecondarySpace />
         <footer className={style.footer}>
             <img src={logo} className={style.logo} alt="" />
-            <span className={style.company_title}>© 2023 Company</span>
+            <span className={style.company_title}>© 2023 SYtech company</span>
         </footer>
     </>
   )

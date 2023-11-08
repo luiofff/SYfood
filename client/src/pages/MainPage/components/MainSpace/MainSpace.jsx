@@ -2,10 +2,49 @@ import React from 'react'
 import styles from "./MainSpace.module.css"
 import logo from "./assets/logoFood.svg"
 
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
 
+import {TextInput} from '@gravity-ui/uikit';
+
+const style_modal = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  bgcolor: '#fff',
+  boxShadow: 24,
+  p: 4,
+  display: "flex",
+  flexDirection: "column",
+  gap: 5,
+  borderRadius: 4
+};
+
+const ValidationTextField = styled(TextField)({
+  '& input:valid + fieldset': {
+    borderColor: '#00C257',
+    borderWidth: 1,
+  },
+  '& input:invalid + fieldset': {
+    borderColor: '#00C257',
+    borderWidth: 1,
+  },
+  '& input:valid:focus + fieldset': {
+    borderLeftWidth: 4,
+    padding: '4px !important', // override inline-style
+  },
+});
 
 
 export default function MainSpace() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const [query, setQuery] = React.useState("");
+
+
   return (
     <>
       <section className={styles.main_space}>
@@ -17,12 +56,21 @@ export default function MainSpace() {
                 <span className={styles.secondary_txt}>Вкусное искусство выбора</span>
             </div>
             <div className={styles.block_content}>
-                <button className={styles.btn}>
-                    Выбрать свой Рецепт
-                </button>
+              <button onClick={handleOpen} className={styles.btn}>
+                Выбрать свой рецепт
+              </button>
             </div>
         </div>
       </section>
+      <Modal
+        open={open}
+        onClose={handleClose}
+      >
+        <Box sx={style_modal}>
+          <span className={styles.modal_title}>Намекните бы вы хотели приготовить?</span>
+          <TextInput placeholder="Placeholder" rightContent={<Label size="s">Right</Label>} hasClear/>
+        </Box>
+      </Modal>
     </>
   )
 }
