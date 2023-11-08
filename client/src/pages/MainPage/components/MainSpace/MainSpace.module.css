@@ -43,8 +43,16 @@
     text-align: center;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 24px;
+
+    transition: .3s ease-out;
+
+    outline: 3px solid var(--accent-brand);
+}
+
+.btn:is(:focus, :active, :hover) {
+    outline-offset: 2px;
 }
 
 
