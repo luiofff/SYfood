@@ -22,20 +22,6 @@ const style_modal = {
   borderRadius: 4
 };
 
-const ValidationTextField = styled(TextField)({
-  '& input:valid + fieldset': {
-    borderColor: '#00C257',
-    borderWidth: 1,
-  },
-  '& input:invalid + fieldset': {
-    borderColor: '#00C257',
-    borderWidth: 1,
-  },
-  '& input:valid:focus + fieldset': {
-    borderLeftWidth: 4,
-    padding: '4px !important', // override inline-style
-  },
-});
 
 
 export default function MainSpace() {
