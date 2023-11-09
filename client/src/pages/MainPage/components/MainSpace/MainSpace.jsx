@@ -2,11 +2,10 @@ import React from 'react'
 import styles from "./MainSpace.module.css"
 import logo from "./assets/logoFood.svg"
 
-import { styled } from '@mui/material/styles';
+
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 
-import {TextInput} from '@gravity-ui/uikit';
 
 const style_modal = {
   position: 'absolute',
@@ -22,20 +21,6 @@ const style_modal = {
   borderRadius: 4
 };
 
-const ValidationTextField = styled(TextField)({
-  '& input:valid + fieldset': {
-    borderColor: '#00C257',
-    borderWidth: 1,
-  },
-  '& input:invalid + fieldset': {
-    borderColor: '#00C257',
-    borderWidth: 1,
-  },
-  '& input:valid:focus + fieldset': {
-    borderLeftWidth: 4,
-    padding: '4px !important', // override inline-style
-  },
-});
 
 
 export default function MainSpace() {
@@ -62,15 +47,6 @@ export default function MainSpace() {
             </div>
         </div>
       </section>
-      <Modal
-        open={open}
-        onClose={handleClose}
-      >
-        <Box sx={style_modal}>
-          <span className={styles.modal_title}>Намекните бы вы хотели приготовить?</span>
-          <TextInput placeholder="Placeholder" rightContent={<Label size="s">Right</Label>} hasClear/>
-        </Box>
-      </Modal>
     </>
   )
 }
