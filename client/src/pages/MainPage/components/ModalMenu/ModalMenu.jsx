@@ -1,46 +1,33 @@
-import React from "react"
-
-import styles from "./ModalMenu.module.css"
-
-import axios from 'axios';
-
-import ClassNames from "classnames"
-
+import React from "react";
+import styles from "./ModalMenu.module.css";
+import ClassNames from "classnames";
 import { useDispatch, useSelector } from 'react-redux';
 import { closeModal } from '../../../../store/actionCreators/modalSlice';
-
-
+import { updateStringData } from "../../../../store/actionCreators/dataSlice";
+import { useNavigate } from 'react-router-dom';
 
 export default function ModalMenu() {
     const dispatch = useDispatch();
+    const history = useNavigate();
     const isModalOpen = useSelector((state) => state.modal.modalOpen);
-    const [userQuery, setUserQuery] = React.useState("");
 
-    const options = {
-        method: 'GET',
-        url: 'https://recipe-by-api-ninjas.p.rapidapi.com/v1/recipe',
-        params: {
-          query: userQuery
-        },
-        headers: {
-          'X-RapidAPI-Key': '4c0913e8fbmshee3d5797b276796p1dabc3jsnd83be6ecfb8b',
-          'X-RapidAPI-Host': 'recipe-by-api-ninjas.p.rapidapi.com'
-        }
-    };
-    
-    const getData = async () => {
-        try {
-            const response = await axios.request(options);
-            console.log(response.data);
-        } catch (error) {
-            console.error(error);
-        }
+    // Correct the selector to use the 'stringData' slice
+    const queryString = useSelector(state => state.stringData.stringData);
+
+    const handleChange = (event) => {
+        dispatch(updateStringData(event.target.value));
+        console.log(queryString);
     }
+
+    const search = () => {
+        // Navigate to the ResultPage with the query parameter
+        history(`/recipes?query=${encodeURIComponent(queryString)}`);
+     }
+
 
     const handleCloseModal = () => {
         dispatch(closeModal());
     };
-
 
     return (
         <>
@@ -51,12 +38,12 @@ export default function ModalMenu() {
                         <p className={styles.pre_title}>Напишите ваши мысли</p>
                     </div>
                 </div>
-                
+
                 <div className={ClassNames(styles.modal_part, styles.second_part)}>
                     <div className={styles.input_block}>
-                        <input type="text" className={styles.input} onChange={(e) => setUserQuery(e.target.value)}/>
+                        <input type="text" className={styles.input} onChange={handleChange}/>
                         <div className={styles.button_block}>
-                            <button className={styles.search_button} onClick={getData}>
+                            <button onClick={search} className={styles.search_button}>
                                 <svg width="20" height="15" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect y="8" width="26" height="6" rx="3" fill="white"/>
                                     <rect x="20.1338" width="14.0057" height="6" rx="3" transform="rotate(58.837 20.1338 0)" fill="white"/>
@@ -66,10 +53,8 @@ export default function ModalMenu() {
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div onClick={handleCloseModal} className={styles.modal_back}>
-            </div>
+            <div onClick={handleCloseModal} className={styles.modal_back}></div>
         </>
     )
 }
