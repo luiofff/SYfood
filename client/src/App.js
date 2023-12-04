@@ -1,7 +1,7 @@
 import './App.css';
 import MainPage from './pages/MainPage/MainPage';
 import ResultPage from './pages/ResultPage/ResultPage';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
