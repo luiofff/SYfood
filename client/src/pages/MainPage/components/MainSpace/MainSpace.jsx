@@ -26,11 +26,11 @@ export default function MainSpace() {
                 <img className={styles.logo} src={logo} alt="" />
             </div>
             <div className={styles.block_content}>
-                <span className={styles.secondary_txt}>Вкусное искусство выбора</span>
+                <span className={styles.secondary_txt}>The Delicious Art of Choice</span>
             </div>
             <div className={styles.block_content}>
               <button onClick={handleOpenModal} className={styles.btn}>
-                Выбрать свой рецепт
+                Choose your recipe
               </button>
             </div>
         </div>

@@ -22,7 +22,8 @@ export default function ModalMenu() {
     const search = () => {
         // Navigate to the ResultPage with the query parameter
         history(`/recipes?query=${encodeURIComponent(queryString)}`);
-     }
+        dispatch(closeModal());
+    }
 
 
     const handleCloseModal = () => {

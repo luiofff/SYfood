@@ -22,9 +22,9 @@ export default function MainSpace() {
       <section className={styles.main_space}>
 
         <div className={styles.head_content}>
-            <h1 className={styles.title}>Готовь то, о чем думаешь</h1>
+            <h1 className={styles.title}>Cook what you think about</h1>
             <div className={styles.pre_title_block}>
-                <p className={styles.pre_title}>Напишите о том, что вы хотели бы поесть и AI напишет вам рецепт, который может подойти для вас исходя из мыслей.</p>
+                <p className={styles.pre_title}>Write about what you would like to eat and AI will write you a recipe that may be suitable for you based on your thoughts.</p>
             </div>
         </div>
 
@@ -34,10 +34,10 @@ export default function MainSpace() {
                     <img src={f_image} className={styles.image} alt="" />
                 </div>
                 <div className={styles.card_content_block}>
-                    <h1 className={styles.card_title}>Хмм... Хочется сегодня что-нибудь сырного и грузинского, какое блюдо ты бы постоветовал мне?</h1>
-                    <p className={styles.card_pre_title}>Хорошо, для вас я предлагаю приготовить "Хачапури". Они являются классическим грузинским блюдом, которое сочетает в себе сырную начинку и хрустящую выпечку...</p>
+                    <h1 className={styles.card_title}>Hmm... I want something cheesy and Georgian today, which dish would you recommend to me?</h1>
+                    <p className={styles.card_pre_title}>Well, I suggest cooking Khachapuri for you. They are a classic Georgian dish that combines cheese filling and crispy pastries...</p>
                     <button className={styles.btn} onClick={handleOpenModal}>
-                        Попробовать
+                        Try
                     </button>
                 </div>
             </div>
