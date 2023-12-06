@@ -35,8 +35,8 @@ export default function ModalMenu() {
             <div className={styles.modal}>
                 <div className={ClassNames(styles.modal_part, styles.first_part)}>
                     <div className={styles.text_block}>
-                        <span className={styles.title}>Что бы вы хотели поесть?</span>
-                        <p className={styles.pre_title}>Напишите ваши мысли</p>
+                        <span className={styles.title}>What would you like to eat?</span>
+                        <p className={styles.pre_title}>Write your thoughts</p>
                     </div>
                 </div>
 

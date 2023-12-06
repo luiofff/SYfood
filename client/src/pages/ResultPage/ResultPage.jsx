@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import styles from "./ResultPage.module.css";
@@ -124,7 +123,7 @@ export default function ResultPage() {
             {index > 0 ? (
               <button className={styles.nav_button} onClick={back}>
                 <span className={styles.arrow}>←</span>
-                <span className={styles.button_title}>Предыдущий</span>
+                <span className={styles.button_title}>Back</span>
               </button>
             ) :
             (
@@ -134,7 +133,7 @@ export default function ResultPage() {
 
             {index < array.length - 1 ? (
                 <button className={styles.nav_button} onClick={next}>
-                    <span className={styles.button_title}>Следующий</span>
+                    <span className={styles.button_title}>Next</span>
                     <span className={styles.arrow}>→</span>
                 </button>
             ) :
@@ -146,11 +145,11 @@ export default function ResultPage() {
 
           <section className={styles.content}>
             <div className={styles.content_block}>
-              <h1 className={styles.menu_title}>Ингредиенты</h1>
+              <h1 className={styles.menu_title}>Ingredients</h1>
               <p className={styles.content_text}>{ingredients}</p>
             </div>
             <div className={styles.content_block}>
-              <h1 className={styles.menu_title}>Инструкции</h1>
+              <h1 className={styles.menu_title}>Instructions</h1>
               <p className={styles.content_text}>{instructions}</p>
             </div>
           </section>
