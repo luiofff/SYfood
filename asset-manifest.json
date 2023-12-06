@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/SYfood/static/css/main.1849a334.css",
-    "main.js": "/SYfood/static/js/main.a04a0ac2.js",
+    "main.js": "/SYfood/static/js/main.43b9055c.js",
     "static/media/first.jpg": "/SYfood/static/media/first.bc5d5df6b8109fe7d1b3.jpg",
     "static/media/logoFood.svg": "/SYfood/static/media/logoFood.280b94801299895d89afeeddd23d6c6b.svg",
     "index.html": "/SYfood/index.html",
     "main.1849a334.css.map": "/SYfood/static/css/main.1849a334.css.map",
-    "main.a04a0ac2.js.map": "/SYfood/static/js/main.a04a0ac2.js.map"
+    "main.43b9055c.js.map": "/SYfood/static/js/main.43b9055c.js.map"
   },
   "entrypoints": [
     "static/css/main.1849a334.css",
-    "static/js/main.a04a0ac2.js"
+    "static/js/main.43b9055c.js"
   ]
 }
