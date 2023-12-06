@@ -85,7 +85,7 @@ export default function ResultPage() {
             {index > 0 ? (
               <button className={styles.nav_button} onClick={back}>
                 <span>←</span>
-                <span className={styles.button_title}>Предыдущий</span>
+                <span className={styles.button_title}>Back</span>
               </button>
             ) :
             (
@@ -101,7 +101,7 @@ export default function ResultPage() {
 
             {index < array.length - 1 ? (
                 <button className={styles.nav_button} onClick={next}>
-                    <span className={styles.button_title}>Следующий</span>
+                    <span className={styles.button_title}>Next</span>
                     <span>→</span>
                 </button>
             ) :
